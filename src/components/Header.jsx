@@ -1,34 +1,66 @@
+//import react
 import React from 'react';
-import {
-    AppBar,
-    Button,
-    IconButton,
-    Toolbar,
-    Typography ,
-} from '@material-ui/core';
-import {makeStyles} from '@material-ui/core/styles';
+//import material-ui
+import { Grid, } from '@material-ui/core';
+import { AppBar, Button, IconButton, Toolbar, Typography, } from '@material-ui/core';
+import { makeStyles, createMuiTheme, formatMs } from '@material-ui/core/styles';
+import { positions } from '@material-ui/system';
 import MenuIcon from '@material-ui/icons/Menu'
 
-const useStyles = makeStyles((theme) => ({
-    flexGrow: {
-      flexGrow: 1,
-    },
-    title: {
+//import hooks
+//import { DisplayDisplay, DisplayWidth, DisplayHeight } from '/home/jacob/farvecomponent/src/components/hooks/useWindowDimensions'; //display size
 
-    }
-  }));
+//import assets
+import logo from '../assets/images/farveComponentIcon.svg';
+
+console.log(logo);
+
+
+const useStyles = makeStyles({
+  root: {
+    background: 'white', //the shape color
+    border: 0,
+    borderRadius: 0,
+    boxShadow: '0 1px 1px 1px rgba(0, 0, 0, .3)',
+    height: 110,
+    color: 'black',
+  },
+
+  flexGrow: {
+    flexGrow: 1,
+
+  },
+
+  farve: {
+    fontFamily: 'NexaBold',
+    fontSize: 24,
+
+  },
+
+  component: {
+    fontFamily: 'NexaBold',
+    fontSize: 65,
+    marginRight: 0,
+
+  },
+
+  icon: {
+    marginRight: 32,
+
+  }
+});
+
 
 function Header() {
-    const classes = useStyles();
-    return (
-        <AppBar position="static">
-        <Toolbar>
-            <div className={classes.flexGrow}/>
-            <Typography variant="h6" className={classes.title}>
-                farveComponent
-            </Typography>
-        </Toolbar>
-      </AppBar>
-    )
+  const classes = useStyles();
+  return (
+    <AppBar position="static" className={classes.root} >
+      <Toolbar>
+        <div className={classes.flexGrow} />
+        <Typography variant="h6"><span className={classes.farve}>FARVE </span><span className={classes.component}>component</span></Typography>
+        <img className={classes.icon} src={logo} alt="logo" />
+      </Toolbar>
+    </AppBar>
+  )
 }
 export default Header;
