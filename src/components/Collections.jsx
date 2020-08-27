@@ -1,12 +1,16 @@
 import React, { useState } from 'react'
 import classnames from 'classnames';
-import {Button, Typography, Tab, Tabs } from '@material-ui/core';
+import { Button, Typography, Tab, Tabs } from '@material-ui/core';
 import PlusIcon from '@material-ui/icons/AddCircleOutline';
 import { makeStyles } from '@material-ui/core/styles'
-import {addCollection, getCollections} from '../utils/localStorage'
+import { addCollection, getCollections } from '../utils/localStorage'
 
-const useStyles = makeStyles(theme=>({
-    root:{
+//import assets
+import Icon from '../assets/images/addCollectionIcon.svg';
+
+
+const useStyles = makeStyles(theme => ({
+    root: {
         marginTop: '34px'
     },
     container: {
@@ -16,7 +20,7 @@ const useStyles = makeStyles(theme=>({
     },
     button: {
         borderRadius: '360px',
-        fontSize: '1.125rem',
+        fontSize: '24px',
         height: '45px',
         textTransform: 'none',
     },
@@ -29,7 +33,7 @@ const useStyles = makeStyles(theme=>({
         boxShadow: '0px 3px 6px #0000004D',
         color: '#fff',
     },
-    indicator:{
+    indicator: {
         backgroundColor: '#fff'
     },
     title: {
@@ -37,7 +41,7 @@ const useStyles = makeStyles(theme=>({
     }
 }));
 
-function Collections(){
+function Collections() {
     const classes = useStyles();
     const [collections, setCollections] = useState(getCollections());
     const [currentCollection, setCurrentCollection] = useState('');
@@ -72,13 +76,13 @@ function Collections(){
             >
                 {renderTabs()}
             </Tabs>
-            <Button 
+            <Button
                 className={classes.button}
                 variant='contained'
                 color='primary'
                 size='large'
                 // TODO: Use Jacob's plus icon instead
-                endIcon={<PlusIcon />}
+                endIcon={<img src={Icon} alt="add collection" />}
                 onClick={handleAddClick}
             >
                 new

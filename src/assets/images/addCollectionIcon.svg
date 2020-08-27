@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23">
+  <g id="Plus_Icon" data-name="Plus Icon" transform="translate(3 3)">
+    <g id="Ellipse_1" data-name="Ellipse 1" fill="none" stroke="#fff" stroke-width="3">
+      <circle cx="8.5" cy="8.5" r="8.5" stroke="none"/>
+      <circle cx="8.5" cy="8.5" r="10" fill="none"/>
+    </g>
+    <g id="Component_4_1" data-name="Component 4 – 1" transform="translate(3.5 3.5)">
+      <line id="Line_1" data-name="Line 1" y2="10" transform="translate(5)" fill="none" stroke="#fff" stroke-width="3"/>
+      <line id="Line_2" data-name="Line 2" y2="10" transform="translate(10 5) rotate(90)" fill="none" stroke="#fff" stroke-width="3"/>
+    </g>
+  </g>
+</svg>
