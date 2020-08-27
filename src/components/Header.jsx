@@ -1,14 +1,8 @@
 //import react
 import React from 'react';
 //import material-ui
-import { Grid, } from '@material-ui/core';
-import { AppBar, Button, IconButton, Toolbar, Typography, } from '@material-ui/core';
-import { makeStyles, createMuiTheme, formatMs } from '@material-ui/core/styles';
-import { positions } from '@material-ui/system';
-import MenuIcon from '@material-ui/icons/Menu'
-
-//import hooks
-//import { DisplayDisplay, DisplayWidth, DisplayHeight } from '/home/jacob/farvecomponent/src/components/hooks/useWindowDimensions'; //display size
+import { AppBar, Toolbar, Typography, } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 
 //import assets
 import logo from '../assets/images/farveComponentIcon.svg';

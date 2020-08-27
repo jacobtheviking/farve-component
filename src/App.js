@@ -1,30 +1,27 @@
 //import react
-import React, { useState, useEffect, Component } from 'react';
-import './App.css';
-//import material-ui
-import { Container, Button } from '@material-ui/core';
-import Icon from '@material-ui/core/Icon';
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles'
 //import components
+import './App.css';
 import Workspace from './components/Workspace';
 import Header from './components/Header';
-//import hooks
-import { DisplaySize, DisplayWidth, DisplayHeight } from '/home/jacob/farvecomponent/src/components/hooks/useWindowDimensions'; //display size
-//import assets
+import Collections from './components/Collections';
 
-
+const useStyles = makeStyles({
+  root: {
+      margin: '33px 60px',
+  },
+})
 
 function App() {
+  const classes = useStyles();
   return (
     <div className="App">
-
       <Header />
-      {/* <Workspace />
-      <DisplaySize />
-      <View />
-      <useWindowDimensions />
-      <Example />
-      <Button variant='contained' color='primary'>Inbar</Button> */}
-
+      <div className={classes.root}>
+        <Workspace />
+        <Collections />
+      </div>
     </div>
   );
 }
